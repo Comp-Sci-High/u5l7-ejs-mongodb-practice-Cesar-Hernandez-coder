@@ -16,7 +16,16 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // Set the view engine
+const planetSchema = new mongoose.Schema({
+  name: "earth",
+  distance: 1,
+  diameter: 1,
+  imagePath: 1,
+  description: "unknown",
+  orbital:
+  
 
+})
 
 // Define the schema for a planet called planetSchema
 // Add the following attributes
@@ -28,7 +37,7 @@ app.use(express.json());
 // orbital (number)
 
 // Define the model called Planet using planetSchema 
-
+const Planet = mongoose.model("planetSchema", planetSchema, "planetSchema" )
 // Create a get route to / that renders home.ejs which renders all the planets into cards
 // e.g. /info/Mercury sends back Mercury's info page
 
